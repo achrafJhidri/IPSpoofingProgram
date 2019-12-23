@@ -1,0 +1,6 @@
+A envoi un paquet ipv6 -> un routeur R ( récupére un ipv6 , encapulé dans un ipv4,tcp,http,ipv6) -> C ( désencapsule le tout , et envoi l'ipv6 et l'envoi a la machine B)
+				raw Sock pour récupérer les paquet ipv6,socket tcp normal		recoi sockettcp/ envoi rawSocket(pour changer l'adresse source donc mettre son adresse )
+
+dans l'autre sens 
+B envoi un paquet ipv6 -> C recoit le paquet ipv6 (lencapsule dans ipv4,tcp,http,ipv6) -> R( désencapsule le tout , et envoi le ping6 reply et le renvoi a A)
+			  recoit rawSocket et envoi un socket TCP			  recoit socketTcp, envoi rawSocket

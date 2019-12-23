@@ -1,0 +1,11 @@
+all: serveurmultiprotocole
+
+
+
+serveurmultiprotocole : serveurmultiprotocole.o
+
+	gcc -o serveurmultiprotocole -lnsl  -Wall serveurmultiprotocole.o
+
+serveurmultiprotocole.o : serveurmultiprotocole.c
+
+	gcc -c -Wall serveurmultiprotocole.c
